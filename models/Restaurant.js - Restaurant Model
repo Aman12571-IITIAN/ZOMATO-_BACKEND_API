@@ -1,0 +1,19 @@
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/db');
+
+const Restaurant = sequelize.define('Restaurant', {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    rating: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+    },
+});
+
+module.exports = Restaurant;
