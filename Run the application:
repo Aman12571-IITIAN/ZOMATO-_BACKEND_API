@@ -1,0 +1,5 @@
+Make sure MySQL is running and a database called zomato_db is created:
+CREATE DATABASE zomato_db;
+Then start the server by running:
+node server.js
+Now, your API should be running at http://localhost:5000/. You can test the authentication routes (/auth/register, /auth/login) and the restaurant routes (/restaurants for getting and adding restaurants
