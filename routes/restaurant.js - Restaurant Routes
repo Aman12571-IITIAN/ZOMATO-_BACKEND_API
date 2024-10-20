@@ -1,0 +1,26 @@
+const express = require('express');
+const Restaurant = require('../models/Restaurant');
+const router = express.Router();
+
+// Get all restaurants
+router.get('/', async (req, res) => {
+    try {
+        const restaurants = await Restaurant.findAll();
+        res.status(200).json(restaurants);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Add a restaurant
+router.post('/', async (req, res) => {
+    const { name, location, rating } = req.body;
+    try {
+        const newRestaurant = await Restaurant.create({ name, location, rating });
+        res.status(201).json(newRestaurant);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+module.exports = router;
