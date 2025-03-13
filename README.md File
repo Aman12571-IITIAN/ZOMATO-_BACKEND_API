@@ -1,0 +1,9 @@
+Create a README.md file in the root of your project with the following content:
+# User Information App
+
+## Overview
+This is a simple React Native application that displays user information fetched from a public API.
+
+## How to Run the Application
+1. Clone the repository.
+2. Navigate to the
